@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'lista.css' %}"/>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="cabeçalho">
+        <h1 id="titulo"><a href="" id="titulo">Lista de itens</a></h1>
+    </div>
+    <br><br><br><br><br><br><br>
+
+    <center>
+    <table id="tabela">
+        <tr>
+            <td id="colunaTabela"><b>Nome</b></td>
+            <td id="colunaTabela"><b>Descrição</b></td>
+            <td id="colunaTabela"><b>Quantidade</b></td>
+            <td id="colunaTabela"><b>Usuário</b></td>
+            <td id="colunaTabela"><b>Ações</b></td>
+        
+            
+                {% for item in itens %}
+                <tr>
+                    <td id="colunaTabela">
+                        {{ item.name }}
+                    </td>
+
+                    <td id="colunaTabela">
+                        {{ item.description }}
+                    </td>
+
+                    <td id="colunaTabela">
+                        {{ item.quantity }}
+                    </td>
+
+                    <td id="colunaTabela">
+                        {{ item.user }}
+                    </td>
+                    <td id="colunaTabela">
+                        <a href="" id="icone">&#9998</a>
+                        <a href="" id="icone">&#10006</a>
+                    </td>
+                </tr>
+                {% endfor %}
+        </tr>
+    </table>
+    </center>
+
+    <br>
+    <p id="add"><a href="" id="add">Adicionar item</a></p>
+</body>
+</html>
