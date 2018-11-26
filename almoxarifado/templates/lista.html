@@ -7,7 +7,6 @@
     <title>Lista</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'lista.css' %}"/>
-    <script src="main.js"></script>
 </head>
 <body>
     <div id="cabeçalho">
@@ -18,6 +17,7 @@
     <center>
     <table id="tabela">
         <tr>
+            <td id="colunaTabela"><b>ID</b></td>
             <td id="colunaTabela"><b>Nome</b></td>
             <td id="colunaTabela"><b>Descrição</b></td>
             <td id="colunaTabela"><b>Quantidade</b></td>
@@ -27,6 +27,10 @@
             
                 {% for item in itens %}
                 <tr>
+                    <td id="colunaTabela">
+                        {{ item.id }}
+                    </td>
+
                     <td id="colunaTabela">
                         {{ item.name }}
                     </td>
