@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lista</title>
+    <title>CRUD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'lista.css' %}"/>
 </head>
@@ -47,7 +47,7 @@
                         {{ item.usuário }}
                     </td>
                     <td id="colunaTabela">
-                        <a href="" id="icone">&#9998</a>
+                        <a href="{% url 'update_itens' item.id %}" id="icone">&#9998</a>
                         <a href="" id="icone">&#10006</a>
                     </td>
                 </tr>

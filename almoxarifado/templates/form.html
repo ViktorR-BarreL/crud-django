@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lista</title>
+    <title>CRUD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'form.css' %}"/>
 </head>
@@ -15,15 +15,14 @@
     <br><br><br><br><br><br><br>
 
     <center>
-        
         <form method="POST" style="font-family: monospace; font-size: 16px">
             {% csrf_token %}
             <table>
             {{ form.as_table }}
             </table>
+            <br>
             <button type="submit" style="font-family: monospace; font-size: 16px">Cadastrar</button>
-        </form>
-    
+        </form> 
     </center>
 </body>
 </html>
