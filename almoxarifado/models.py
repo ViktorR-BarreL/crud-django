@@ -6,6 +6,3 @@ class Almoxarifado(models.Model):
     descrição = models.TextField()
     quantidade = models.PositiveIntegerField()
     usuário = models.CharField(max_length=100)
-    
-    def __str__(self):
-        return self.name
