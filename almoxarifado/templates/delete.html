@@ -15,14 +15,11 @@
     <br><br><br><br><br><br><br>
 
     <center>
-        <form method="POST" style="font-family: monospace; font-size: 16px">
-            {% csrf_token %}
-            <table>
-            {{ form.as_table }}
-            </table>
-            <br>
-            <button type="submit" style="font-family: monospace; font-size: 16px">Cadastrar</button>
-        </form> 
+    <form method="POST">
+        {% csrf_token %}
+        <h1 id="textoDelete">Tem certeza que deseja excluir o item <b>{{item.name}}</b>?</h1>
+        <button type="submit" id='botaoDelete'>Confirmar</button>
+    </form>
     </center>
 </body>
 </html>

@@ -62,3 +62,13 @@ body{
 #tabelaForm{
     padding: 100px;
 }
+
+#textoDelete{
+    font-family: monospace;
+    text-align: center;
+}
+
+#botaoDelete{
+    font-family: monospace;
+    font-size: 16px;
+}

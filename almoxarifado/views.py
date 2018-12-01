@@ -24,3 +24,12 @@ def update_itens(request, id):
         return redirect('list_itens')
 
     return render(request, 'form.html', {'form': form,})
+
+def delete_itens(request, id):
+    item = Almoxarifado.objects.get(id=id)
+
+    if request.method == 'POST':
+        item.delete()
+        return redirect('list_itens')
+
+    return render(request, 'delete.html', {'item': item})

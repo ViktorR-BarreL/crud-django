@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>CRUD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{% static 'lista.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'estilo.css' %}"/>
 </head>
 <body>
     <div id="cabeçalho">
@@ -48,7 +48,7 @@
                     </td>
                     <td id="colunaTabela">
                         <a href="{% url 'update_itens' item.id %}" id="icone">&#9998</a>
-                        <a href="" id="icone">&#10006</a>
+                        <a href="{% url 'delete_itens' item.id %}" id="icone">&#10006</a>
                     </td>
                 </tr>
                 {% endfor %}
