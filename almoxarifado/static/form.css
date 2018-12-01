@@ -1,0 +1,28 @@
+body{
+    background-color: #88CC88;
+}
+
+#cabeçalho{
+    background-color: #55AA55;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+#titulo{
+    font-family: monospace;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 35px;
+}
+
+#titulo:hover{
+    text-decoration-line: underline;
+}
+
+form{
+    font-family: monospace;
+}

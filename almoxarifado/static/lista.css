@@ -58,3 +58,7 @@ body{
 #icone:hover{
     opacity: 0.5;
 }
+
+#tabelaForm{
+    padding: 100px;
+}

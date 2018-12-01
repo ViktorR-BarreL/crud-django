@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lista</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'form.css' %}"/>
+</head>
+<body>
+    <div id="cabeçalho">
+        <h1 id="titulo"><a href="{% url 'list_itens' %}" id="titulo">Lista de itens</a></h1>
+    </div>
+    <br><br><br><br><br><br><br>
+
+    <center>
+        
+        <form method="POST">
+            {% csrf_token %}
+            <table id='formulario'>
+            {{ form.as_table }}
+            </table>
+            <button type="submit">Cadastrar</button>
+        </form>
+    
+    </center>
+</body>
+</html>
