@@ -22,7 +22,3 @@ body{
 #titulo:hover{
     text-decoration-line: underline;
 }
-
-form{
-    font-family: monospace;
-}

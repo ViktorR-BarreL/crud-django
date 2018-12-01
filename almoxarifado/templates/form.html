@@ -16,12 +16,12 @@
 
     <center>
         
-        <form method="POST">
+        <form method="POST" style="font-family: monospace; font-size: 16px">
             {% csrf_token %}
-            <table id='formulario'>
+            <table>
             {{ form.as_table }}
             </table>
-            <button type="submit">Cadastrar</button>
+            <button type="submit" style="font-family: monospace; font-size: 16px">Cadastrar</button>
         </form>
     
     </center>
