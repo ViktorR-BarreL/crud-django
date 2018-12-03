@@ -1,7 +1,7 @@
 from django.db import models
 
 class Item(models.Model):
-    id = models.AutoField(primary_key = True)
+    id = models.IntegerField(primary_key = True)
     nome = models.CharField(max_length=100)
     descrição = models.TextField()
     quantidade = models.PositiveIntegerField()
@@ -12,7 +12,7 @@ class Item(models.Model):
         return self.nome
 
 class Categoria(models.Model):
-    id = models.AutoField(primary_key= True)
+    id = models.IntegerField(primary_key= True)
     nome = models.CharField(max_length=100)
 
     def __str__(self):
