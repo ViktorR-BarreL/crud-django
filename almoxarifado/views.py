@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect
-from .models import Almoxarifado
-from .forms import AlmoxarifadoForm
+from .models import Item
+from .forms import ItemForm
 
 def list_itens(request):
-    itens = Almoxarifado.objects.all()
+    itens = Item.objects.all()
     return render(request, 'lista.html', {'itens': itens})
 
 def create_itens(request):
-    form = AlmoxarifadoForm(request.POST or None)
+    form = ItemForm(request.POST or None)
 
     if form.is_valid():
         form.save()
@@ -16,8 +16,8 @@ def create_itens(request):
     return render(request, 'form.html', {'form':form})
 
 def update_itens(request, id):
-    item = Almoxarifado.objects.get(id=id)
-    form = AlmoxarifadoForm(request.POST or None, instance=item)
+    item = Item.objects.get(id=id)
+    form = ItemForm(request.POST or None, instance=item)
 
     if form.is_valid():
         form.save()
@@ -26,7 +26,7 @@ def update_itens(request, id):
     return render(request, 'form.html', {'form': form,})
 
 def delete_itens(request, id):
-    item = Almoxarifado.objects.get(id=id)
+    item = Item.objects.get(id=id)
 
     if request.method == 'POST':
         item.delete()

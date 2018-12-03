@@ -22,6 +22,7 @@
             <td id="colunaTabela"><b>Descrição</b></td>
             <td id="colunaTabela"><b>Quantidade</b></td>
             <td id="colunaTabela"><b>Usuário</b></td>
+            <td id="colunaTabela"><b>Categoria</b></td>
             <td id="colunaTabela"><b>Ações</b></td>
         
             
@@ -45,6 +46,10 @@
 
                     <td id="colunaTabela">
                         {{ item.usuário }}
+                    </td>
+
+                    <td id="colunaTabela">
+                        {{ item.categoria }}
                     </td>
                     <td id="colunaTabela">
                         <a href="{% url 'update_itens' item.id %}" id="icone">&#9998</a>
